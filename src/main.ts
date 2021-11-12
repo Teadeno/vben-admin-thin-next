@@ -14,6 +14,7 @@ import { setupStore } from '/@/store';
 import { setupGlobDirectives } from '/@/directives';
 import { setupI18n } from '/@/locales/setupI18n';
 import { registerGlobComp } from '/@/components/registerGlobComp';
+import 'font-awesome/css/font-awesome.min.css';
 
 // Importing on demand in local development will increase the number of browser requests by around 20%.
 // This may slow down the browser refresh speed.
@@ -21,6 +22,7 @@ import { registerGlobComp } from '/@/components/registerGlobComp';
 if (import.meta.env.DEV) {
   import('ant-design-vue/dist/antd.less');
 }
+import { setupVxeTable } from '/@/plugins/vxe-table';
 
 async function bootstrap() {
   const app = createApp(App);
@@ -50,6 +52,8 @@ async function bootstrap() {
   // Configure global error handling
   setupErrorHandle(app);
 
+  // 注册VxeTable
+  setupVxeTable(app);
   // https://next.router.vuejs.org/api/#isready
   // await router.isReady();
 

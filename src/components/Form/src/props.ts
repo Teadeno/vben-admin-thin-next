@@ -14,7 +14,7 @@ export const basicProps = {
   // 标签宽度  固定宽度
   labelWidth: {
     type: [Number, String] as PropType<number | string>,
-    default: 0,
+    default: 100,
   },
   fieldMapToTime: {
     type: Array as PropType<FieldMapToTime>,
