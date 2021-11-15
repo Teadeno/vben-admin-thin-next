@@ -10,7 +10,7 @@ import './index.scss';
 // 按需加载的方式默认是不带国际化的，自定义国际化需要自行解析占位符 '{0}'，例如：
 VXETable.setup({
   i18n: (key, args) => XEUtils.toFormatString(XEUtils.get(zhCN, key), args),
-  size: 'medium',
+  size: 'mini',
   version: 1,
   table: {
     border: 'full',
@@ -64,6 +64,7 @@ VXETable.setup({
     pageSizes: [50, 200, 500, 1000],
     pageSize: 50,
   },
+
   button: {
     size: 'mini',
   },

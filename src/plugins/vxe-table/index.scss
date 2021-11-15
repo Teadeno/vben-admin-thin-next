@@ -6,7 +6,7 @@ $vxe-font-size-mini: 14px ;
 
 /*table*/
 $vxe-table-font-color: #000000;
-$vxe-toolbar-height-mini: 32px ;
+$vxe-toolbar-height-mini: 37px ;
 $vxe-table-row-height-mini: 30px;
 $vxe-table-border-color: #d3d3d3;
 $vxe-table-row-current-background-color: #e6f7ff;
@@ -15,18 +15,8 @@ $vxe-table-row-current-background-color: #e6f7ff;
 $vxe-loading-background-color: rgba(255, 254, 254, 0.2);
 
 @import 'vxe-table/styles/modules.scss';
-.vxe-pager--jump-prev{
-  background-color: #fff!important;
-}
-.vxe-pager--prev-btn{
-  background-color: #fff!important;
-}
-.vxe-pager--next-btn{
-  background-color: #fff!important;
-}
-.vxe-pager--jump-next{
-  background-color: #fff!important;
-}
+
+/*table 加载动画*/
 .vxe-loading .vxe-loading--spinner{
   width: 50px;
   height: 50px;
@@ -38,28 +28,16 @@ $vxe-loading-background-color: rgba(255, 254, 254, 0.2);
   animation: loading 1s infinite linear;
 
 }
-
 @keyframes loading {
   0% { transform: rotate(0deg) }
   100% { transform: rotate(360deg) }
 }
+
 .vxe-loading .vxe-loading--spinner:before, .vxe-loading .vxe-loading--spinner:after {
   display: none;
-  //content: "";
-  //width: 100%;
-  //height: 100%;
-  //border-radius: 50%;
-  //background-color: #0c77d0;
-  //opacity: 0.6;
-  //position: absolute;
-  //top: 0;
-  //left: 0;
-  //-webkit-animation: bounce 2s infinite ease-in-out;
-  //animation: bounce 2s infinite ease-in-out;
 }
-.vxe-toolbar.size--medium{
-  height:37px
-}
+
+/*table form 边距*/
 .vxe-form .vxe-form--item{
   padding:0.2em 0.2em  0 0
 }
@@ -84,13 +62,11 @@ $vxe-loading-background-color: rgba(255, 254, 254, 0.2);
 .vxe-button--icon.vxe-icon--refresh:hover:before,.vxe-button--icon.vxe-icon--refresh:hover:after {
   border-top-color:#5faeff
 }
- .vxe-button + .vxe-button{
+ .vxe-button + .vxe-button,.ant-btn + .ant-btn{
   margin-left: 4px;
 }
 
 .vxe-table--render-default.size--mini .vxe-header--column:not(.col--ellipsis), .vxe-table--render-default.size--mini .vxe-body--column:not(.col--ellipsis), .vxe-table--render-default.size--mini .vxe-footer--column:not(.col--ellipsis){
   padding: 2px 0;
 }
-
-//.vxe-grid--form-wrapper >
 
